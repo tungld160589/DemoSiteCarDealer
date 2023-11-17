@@ -30,30 +30,37 @@
         <a href="#">About Us</a>
         </div>
     </div>
-    <img
-      src="img/auto-trader-car-dealer-wordpress-theme.jpg"
-      alt="anh demo"
-      width="100%"
-      height="auto"
-    />
-    <img
-    src="img/tesla.jpg"
-    alt="anh demo"
-    width="100%"
-    height="auto"
-  />
-  <img
-  src="img/tesla.jpg"
-  alt="anh demo"
-  width="100%"
-  height="auto"
-/>
-<img
-src="img/tesla.jpg"
-alt="anh demo"
-width="100%"
-height="auto"
-/>
+    <!-- Slide ảnh -----------------------------------  -->
+    <div class="slideshow-container">
+      <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
+       <div class="mySlides fade">
+         <!-- <div class="numbertext">1 / 3</div> -->
+         <img src="img/auto-trader-car-dealer-wordpress-theme.jpg" style="width:100%">
+         <!-- <div class="text">Nội Dung 1</div> -->
+       </div>
+      <div class="mySlides fade">
+         <!-- <div class="numbertext">2 / 3</div> -->
+         <img src="img/tesla.jpg" style="width:100%">
+         <!-- <div class="text">Nội Dung 2</div> -->
+       </div>
+      <div class="mySlides fade">
+         <!-- <div class="numbertext">3 / 3</div> -->
+         <img src="img/auto-trader-car-dealer-wordpress-theme.jpg" style="width:100%">
+         <!-- <div class="text">Nội Dung 3</div> -->
+       </div>
+      <!-- Nút điều khiển mũi tên-->
+       <a class="prev" onclick="plusSlides(-1)">❮</a>
+       <a class="next" onclick="plusSlides(1)">❯</a>
+     </div>
+     <br>
+    <!-- Nút tròn điều khiển slideshow-->
+     <div class ="dot-control">
+       <span class="dot" onclick="currentSlide(1)"></span>
+       <span class="dot" onclick="currentSlide(2)"></span>
+       <span class="dot" onclick="currentSlide(3)"></span>
+     </div>
+    <!-- ---------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------------------------->
   <script src="script.js"></script>
   </body>
 </html>
