@@ -8,6 +8,7 @@ ul,
 li {
   list-style: none;
 }
+
 /*-------------------MENU HEADER---------------------*/
 /*---------------------------------------------------*/
 .layer-under-menu {
@@ -29,7 +30,6 @@ li {
 }
 .space-menu {
   width: 40%;
-  /* background-color: aqua; */
 }
 .space-menu p {
   margin-top: 25px;
@@ -50,7 +50,6 @@ li {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 20px;
 }
 .link-control a {
@@ -64,15 +63,21 @@ li {
   text-decoration: underline;
 }
 /*----------------------------------------------------*/
-ul li:hover ul.dropdown {
+.link-control li:hover ul.dropdown {
   display: block;
 }
-ul li ul.dropdown li {
+.link-control li {
+  align-self: stretch;
+}
+.link-control li a {
+  vertical-align: bottom;
+}
+.link-control li ul.dropdown li {
   display: block;
 }
 .dropdown {
   position: absolute;
-  min-width: 100;
+  min-width: 160px;
   margin-top: 10px;
   background-color: #f9f9f9;
   margin-left: 0;
@@ -83,7 +88,6 @@ ul li ul.dropdown li {
   text-decoration: none;
   color: black;
   display: block;
-  z-index: 1;
 }
 .dropdown a:hover {
   color: orangered;
@@ -98,12 +102,14 @@ ul li ul.dropdown li {
   margin: auto;
 }
 /* ẩn hình ảnh cho phần tử slideshow */
-.mySlides {
-  display: none;
+
+.mySlides img {
+  width: 100%;
+  height: auto;
 }
 /* thiết kế nút mũi tên*/
-.prev,
-.next {
+.prev-slide-top,
+.next-slide-top {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -118,33 +124,17 @@ ul li ul.dropdown li {
   user-select: none;
 }
 /* thiết kế nút mũi tên next nằm phía bên phải */
-.next {
+.next-slide-top {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 /* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
-.prev:hover,
-.next:hover {
+.prev-slide-top:hover,
+.next-slide-top:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 /* Thiết lập style cho nội dung của mỗi phần tử slideshow */
-/* .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-} */
-/* Thiết lập style cho số hiển thị của phần tử */
-/* .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-} */
+
 /* thiết lập style  nút tròn điều khiển*/
 .dot-control {
   position: absolute;
