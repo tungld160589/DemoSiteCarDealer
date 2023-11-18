@@ -10,15 +10,7 @@ function modifyBgMenuHeight() {
 window.onscroll = function () {
   modifyBgMenuHeight();
 };
-const dropBtn = document.querySelector('.drop-btn');
 
-const dropDownContent = document.querySelector('.dropdown-content');
-dropBtn.addEventListener('mouseover', function () {
-  dropDownContent.classList.remove('hiden');
-});
-dropDownContent.addEventListener('mouseleave', function () {
-  dropDownContent.classList.add('hiden');
-});
 /*------------Slide show home---------------- */
 let slideIndex = 1;
 showSlides(slideIndex);

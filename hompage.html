@@ -8,28 +8,30 @@
     <title>HomePage</title>
   </head>
   <body>
-    <div class="layer-under-menu">aaaaaaa</div> 
-    <div class="menu-group">
-      <div class="logo-control"> <img src="img/auto-trade-logo-retina.png"></img></div>
+    <nav >
+      <div class="layer-under-menu"></div>
+      <div class="menu-group">
+      <div class="logo-control"> <img src="img/auto-trade-logo-retina.png"></img></div> 
       <div class="space-menu"><p>find your dream car</p></div>
-      <div class="link-control">
-        <a href="#">Home</a>
-        <div class="dropdown">
-          <div class="drop-btn">Brands</div>
-            <div class="dropdown-content hiden">
-              <a href="#">Toyota</a>
-              <a href="#">Mercedes-Benz</a>
-              <a href="#">Ford</a>
-              <a href="#">Volvo</a>
-              <a href="#">BMW</a>
-              <a href="#">Subaru</a>
-              <a href="#">Mazda</a>
-            </div>
-        </div>
-        <a href="#">Sign Up</a>
-        <a href="#">About Us</a>
-        </div>
-    </div>
+      <ul class="link-control">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown-control">
+          <a href="#">Brands &#9662;</a>
+          <ul class="dropdown" >
+            <li><a href="#">Toyota</a></li>
+            <li><a href="#">Mercedes-Benz</a></li>
+            <li><a href="#">Ford</a></li>
+            <li><a href="#">Volvo</a></li>
+            <li><a href="#">BMW</a></li>
+            <li><a href="#">Subaru</a></li>
+            <li><a href="#">Mazda</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul></div>
+    </nav>
+
     <!-- Slide ảnh -----------------------------------  -->
     <div class="slideshow-container">
       <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
@@ -51,14 +53,16 @@
       <!-- Nút điều khiển mũi tên-->
        <a class="prev" onclick="plusSlides(-1)">❮</a>
        <a class="next" onclick="plusSlides(1)">❯</a>
+        <!-- Nút tròn điều khiển slideshow-->
+       <div class ="dot-control">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
      </div>
-     <br>
-    <!-- Nút tròn điều khiển slideshow-->
-     <div class ="dot-control">
-       <span class="dot" onclick="currentSlide(1)"></span>
-       <span class="dot" onclick="currentSlide(2)"></span>
-       <span class="dot" onclick="currentSlide(3)"></span>
-     </div>
+    
+   
+     
     <!-- ---------------------------------------- -->
  <!-- ----------------------------------------------------------------------------------------------->
   <script src="script.js"></script>

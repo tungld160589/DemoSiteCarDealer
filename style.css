@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+ul,
+li {
+  list-style: none;
+}
 /*-------------------MENU HEADER---------------------*/
 /*---------------------------------------------------*/
 .layer-under-menu {
@@ -12,6 +16,7 @@
   position: fixed;
   width: 100%;
   height: 100px;
+  z-index: 99;
 }
 .logo-control {
   width: 146px;
@@ -39,6 +44,7 @@
   justify-content: center;
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 .link-control {
   margin-top: 30px;
@@ -58,33 +64,28 @@
   text-decoration: underline;
 }
 /*----------------------------------------------------*/
-.drop-btn {
-  color: white;
-  text-transform: uppercase;
+ul li:hover ul.dropdown {
+  display: block;
 }
-.drop-btn:hover {
-  cursor: pointer;
-  color: orangered;
-  text-decoration: underline;
+ul li ul.dropdown li {
+  display: block;
 }
-.hiden {
-  display: none;
-}
-.dropdown-content {
+.dropdown {
   position: absolute;
-  min-width: 140px;
+  min-width: 100;
   margin-top: 10px;
   background-color: #f9f9f9;
   margin-left: 0;
+  display: none;
 }
-.dropdown-content a {
+.dropdown a {
   padding: 12px 10px;
   text-decoration: none;
   color: black;
   display: block;
   z-index: 1;
 }
-.dropdown-content a:hover {
+.dropdown a:hover {
   color: orangered;
   text-decoration: underline;
   background-color: #ddd;
@@ -93,7 +94,7 @@
 /*---------------------------------------------------*/
 .slideshow-container {
   width: 100%;
-  /* position: relative; */
+  position: relative;
   margin: auto;
 }
 /* ẩn hình ảnh cho phần tử slideshow */
@@ -148,8 +149,7 @@
 .dot-control {
   position: absolute;
   text-align: center;
-  background-color: orange;
-  top: 55%;
+  bottom: 3%;
   right: 50%;
 }
 .dot {
