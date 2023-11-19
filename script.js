@@ -31,10 +31,6 @@ const ford = {
   img: '../img/ford.jpg',
 };
 const productFeature = [tesla, bmw, ford];
-let slideIndex = 1;
-const nextSlideTop = document.querySelector('.next-slide-top');
-const prevSlideTop = document.querySelector('.prev-slide-top');
-const imgSlideTop = document.querySelector('.img-slide-top');
 /* in các nút dot ra  */
 function printdot() {
   for (let i = 0; i < productFeature.length; i++) {
@@ -44,58 +40,47 @@ function printdot() {
   }
 }
 printdot();
+const dotControl = document.getElementById('dot-control');
+const resetColorDot = num => {
+  dotControl.children[num].style.backgroundColor = '#e2dfdf';
+};
+
 /*------------------------------------------ */
+/*---------------------------------------- */
+const nextSlideTop = document.querySelector('.next-slide-top');
+const prevSlideTop = document.querySelector('.prev-slide-top');
+const imgSlideTop = document.querySelector('.img-slide-top');
+let slideIndex = 0;
 const changeImgSlide = num => {
   imgSlideTop.src = productFeature[num].img;
+  dotControl.children[num].style.backgroundColor = '#717171';
 };
-/*------------------------------------------ */
-/*-------- xử lý sự kiện click trên nút dot */
-console.log(document.getElementById('dot-control').children);
-const dotEvent2 = document.getElementById('dot-control').children[1];
-dotEvent2.addEventListener('click', function () {
-  slideIndex = 2;
-  changeImgSlide(slideIndex - 1);
-});
-/*---------------------------------------- */
+changeImgSlide(slideIndex);
 /* xử lý nút netx trên slide */
-nextSlideTop.addEventListener('click', function () {
-  if (slideIndex == productFeature.length) {
-    changeImgSlide(0);
-    slideIndex = 1;
-  }
-  if (slideIndex < productFeature.length) {
-    changeImgSlide(slideIndex);
+const eventNextSlideTop = () => {
+  if (slideIndex < productFeature.length - 1) {
+    resetColorDot(slideIndex);
+    changeImgSlide(slideIndex + 1);
     slideIndex++;
+  } else {
+    resetColorDot(slideIndex);
+    changeImgSlide(0);
+    slideIndex = 0;
   }
-});
+};
+nextSlideTop.addEventListener('click', eventNextSlideTop);
 /*------------------------------------------ */
 /* Xử lý nút back trên slide*/
 prevSlideTop.addEventListener('click', function () {
-  if (slideIndex == 1) {
-    changeImgSlide(0);
-    slideIndex = productFeature.length;
-  }
-  if (slideIndex > 1) {
+  if (slideIndex > 0 && slideIndex <= productFeature.length - 1) {
+    resetColorDot(slideIndex);
     changeImgSlide(slideIndex - 1);
     slideIndex--;
+  } else {
+    resetColorDot(slideIndex);
+    changeImgSlide(productFeature.length - 1);
+    slideIndex = productFeature.length - 1;
   }
 });
-/********************************Dot-Control****************************************** */
-
-// dotControl.innerHTML = '<div class="dot"></div>';
-// console.log(dotControl);
-// console.log(dotControl.children);
-// dotControl.children.push = 'div.dot';
-// dotControl.children.push = 'div.dot';
-// console.log(dotControl.children);
-// function printdot() {
-//   for (let i = 0; i < productFeature.length; i++) {
-//     console.log(i);
-//     dotControl.innerHTML = '<div class="dot"></div><br>';
-//   }
-// }
-// printdot();
-
-// Autoplay (optional)
-// Switch to the next slide every 3 seconds
-// setInterval(nextSlide, 1000);
+// Switch to the next slide every 60 seconds
+//setInterval(eventNextSlideTop, 60000);
