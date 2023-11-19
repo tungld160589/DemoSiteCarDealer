@@ -82,5 +82,5 @@ prevSlideTop.addEventListener('click', function () {
     slideIndex = productFeature.length - 1;
   }
 });
-// Switch to the next slide every 60 seconds
-//setInterval(eventNextSlideTop, 60000);
+// slide tự nhảy ảnh mỗi 1 phút 1 lần
+setInterval(eventNextSlideTop, 60000);
