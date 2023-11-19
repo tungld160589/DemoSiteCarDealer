@@ -35,28 +35,7 @@ let slideIndex = 1;
 const nextSlideTop = document.querySelector('.next-slide-top');
 const prevSlideTop = document.querySelector('.prev-slide-top');
 const imgSlideTop = document.querySelector('.img-slide-top');
-nextSlideTop.addEventListener('click', function () {
-  if (slideIndex == productFeature.length) {
-    imgSlideTop.src = productFeature[0].img;
-    slideIndex = 0;
-  }
-  if (slideIndex < productFeature.length) {
-    imgSlideTop.src = productFeature[slideIndex].img;
-    slideIndex++;
-  }
-});
-prevSlideTop.addEventListener('click', function () {
-  if (slideIndex == 1) {
-    imgSlideTop.src = productFeature[productFeature.length - 1].img;
-    slideIndex = productFeature.length;
-  }
-  if (slideIndex > 1) {
-    imgSlideTop.src = productFeature[slideIndex - 1].img;
-    slideIndex--;
-  }
-});
-/********************************Dot-Control****************************************** */
-
+/* in các nút dot ra  */
 function printdot() {
   for (let i = 0; i < productFeature.length; i++) {
     const dotControl = document.getElementById('dot-control');
@@ -64,6 +43,44 @@ function printdot() {
     dotControl.appendChild(createDiv);
   }
 }
+printdot();
+/*------------------------------------------ */
+const changeImgSlide = num => {
+  imgSlideTop.src = productFeature[num].img;
+};
+/*------------------------------------------ */
+/*-------- xử lý sự kiện click trên nút dot */
+console.log(document.getElementById('dot-control').children);
+const dotEvent2 = document.getElementById('dot-control').children[1];
+dotEvent2.addEventListener('click', function () {
+  slideIndex = 2;
+  changeImgSlide(slideIndex - 1);
+});
+/*---------------------------------------- */
+/* xử lý nút netx trên slide */
+nextSlideTop.addEventListener('click', function () {
+  if (slideIndex == productFeature.length) {
+    changeImgSlide(0);
+    slideIndex = 1;
+  }
+  if (slideIndex < productFeature.length) {
+    changeImgSlide(slideIndex);
+    slideIndex++;
+  }
+});
+/*------------------------------------------ */
+/* Xử lý nút back trên slide*/
+prevSlideTop.addEventListener('click', function () {
+  if (slideIndex == 1) {
+    changeImgSlide(0);
+    slideIndex = productFeature.length;
+  }
+  if (slideIndex > 1) {
+    changeImgSlide(slideIndex - 1);
+    slideIndex--;
+  }
+});
+/********************************Dot-Control****************************************** */
 
 // dotControl.innerHTML = '<div class="dot"></div>';
 // console.log(dotControl);
