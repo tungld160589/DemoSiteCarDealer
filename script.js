@@ -35,9 +35,6 @@ let slideIndex = 1;
 const nextSlideTop = document.querySelector('.next-slide-top');
 const prevSlideTop = document.querySelector('.prev-slide-top');
 const imgSlideTop = document.querySelector('.img-slide-top');
-console.log(nextSlideTop);
-console.log(imgSlideTop);
-// imgSlideTop.src = productFeature[0].img;
 nextSlideTop.addEventListener('click', function () {
   if (slideIndex == productFeature.length) {
     imgSlideTop.src = productFeature[0].img;
@@ -58,6 +55,30 @@ prevSlideTop.addEventListener('click', function () {
     slideIndex--;
   }
 });
+/********************************Dot-Control****************************************** */
+
+function printdot() {
+  for (let i = 0; i < productFeature.length; i++) {
+    const dotControl = document.getElementById('dot-control');
+    const createDiv = document.createElement('div');
+    dotControl.appendChild(createDiv);
+  }
+}
+
+// dotControl.innerHTML = '<div class="dot"></div>';
+// console.log(dotControl);
+// console.log(dotControl.children);
+// dotControl.children.push = 'div.dot';
+// dotControl.children.push = 'div.dot';
+// console.log(dotControl.children);
+// function printdot() {
+//   for (let i = 0; i < productFeature.length; i++) {
+//     console.log(i);
+//     dotControl.innerHTML = '<div class="dot"></div><br>';
+//   }
+// }
+// printdot();
+
 // Autoplay (optional)
 // Switch to the next slide every 3 seconds
 // setInterval(nextSlide, 1000);
