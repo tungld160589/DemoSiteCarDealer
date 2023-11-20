@@ -8,7 +8,9 @@ ul,
 li {
   list-style: none;
 }
-
+footer {
+  background-image: url('img/footer.jpg');
+}
 /*-------------------MENU HEADER---------------------*/
 /*---------------------------------------------------*/
 .layer-under-menu {
@@ -167,32 +169,32 @@ li {
 }
 
 .text-inslide-home .control-logan-top hr {
-  width: 30px;
+  width: 2vw;
   border: 1px solid white;
 }
 .text-inslide-home .control-logan-top div {
   width: 2%;
 }
 .text-inslide-home .control-logan-top .slogan {
-  font-size: 15px;
+  font-size: 1vw;
   font-weight: bold;
   text-transform: uppercase;
 }
 .text-inslide-home .nameProduct {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 2vw;
 }
 .text-inslide-home div div .dola {
-  font-size: 23px;
+  font-size: 1.5vw;
   position: absolute;
-  left: 0px;
-  bottom: 26%;
+  left: -1px;
+  bottom: 30%;
 }
 .text-inslide-home div div .price {
-  font-size: 45px;
+  font-size: 2.8vw;
   background-color: orangered;
   text-align: center;
-  width: 90px;
+  width: 5.7vw;
 
   /* margin-bottom: 0; */
 }
@@ -202,16 +204,16 @@ li {
   gap: 10px;
 }
 .text-rumor {
-  font-size: 25px;
+  font-size: 1.8vw;
   font-weight: 600;
 }
 .time-to-pay {
-  font-size: 15px;
-  letter-spacing: 2px;
+  font-size: 1vw;
+  letter-spacing: 0.1vw;
   font-weight: 600;
   background-color: rgb(128, 180, 240);
-  height: 20px;
-  width: 90px;
+  height: 1.5vw;
+  width: 5.7vw;
   text-align: center;
 }
 .btn-test-drive {
@@ -223,8 +225,18 @@ li {
   text-align: center;
   width: 25%;
   height: 23%;
-  font-size: 18px;
+  font-size: 1vw;
   text-transform: uppercase;
   font-weight: 500;
   border: none;
+}
+/*****************************************************/
+/*-------------Footer---------------------------*/
+.footer-control {
+  width: 100%;
+  gap: 10vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 3vw 2vw;
 }

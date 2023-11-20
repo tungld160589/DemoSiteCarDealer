@@ -16,19 +16,19 @@ const tesla = {
   name: 'Tesla Model S',
   price: 5000,
   color: 'gold',
-  img: '../img/tesla.jpg',
+  img: 'img/tesla.jpg',
 };
 const bmw = {
   name: 'BMW Z4 2021 Sdrive30i 2.0',
   price: 6000,
   color: 'blue',
-  img: '../img/bmw.jpg',
+  img: 'img/bmw.jpg',
 };
 const ford = {
   name: 'Ford Ranger Wildtrak',
   price: 7000,
   color: 'blue',
-  img: '../img/ford.jpg',
+  img: 'img/ford.jpg',
 };
 const productFeature = [tesla, bmw, ford];
 /* in các nút dot ra  */
